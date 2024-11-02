@@ -54,40 +54,6 @@ Neste projeto será utilizada a linguagem Python por se tratar de uma linguagem 
 ## 1.4 BASE DE DADOS
 A base de dados utilizada será uma base do site ImageNet, também disponível no Kaggle, ofertada pela Princeton University e Stanford University, que se trata de uma série de imagens rotuladas que servirão tanto para o treinamento do modelo que irá entender a imagem através de visão computacional, para que assim possa decodificá-la, quanto para a possível geração de imagens melhores que as fornecidas pelo MidJourney, pelos parâmetros elaborados anteriormente.
 ## 1.5 CRONOGRAMA
-Etapa 1 – Começo do Projeto
-Atividades e Prazos:
-
-•	(26/08/2024) Semana 1:
-
-o	Definir o grupo de trabalho.
-
-o	Definir as premissas do projeto: empresa, área de atuação e dados (imagem ou texto).
-
-•	(02/09/2024) Semana 2:
-
-o	Determinar objetivos e metas.
-
-o	Criar um cronograma de atividades.
-
-Etapa 2 – Definição do Produto Analítico
-Objetivos: Análise exploratória da base de dados e definição do método analítico.
-Atividades e Prazos:
-
-•	(09/09/2024) Semana 3:
-
-o	Definir bibliotecas (pacotes) Python e repositório no GitHub.
-
-o	Definir a base de dados e iniciar a análise exploratória.
-
-•	(16/09/2024) Semana 4:
-
-o	Tratar a base de dados (preparação e treinamento).
-
-o	Definir e descrever as bases teóricas dos métodos analíticos.
-
-•	(23/09/2024) Semana 5:
-
-o	Definir e descrever como será calculada a acurácia.
 
 Etapa 3 – Apresentação de Produtos e Storytelling
 Objetivos: Consolidação dos resultados e preparação para apresentação.
@@ -154,9 +120,57 @@ A geração de imagens por IAG segue a mesma estrutura do PLN explicada anterior
 Processamento de Arquivos:
 
 O processamento de arquivos de imagem envolve a conversão das imagens em um formato numérico que possam ser processados corretamente, onde as imagens são convertidas em matrizes numéricas onde cada número representa um pixel da imagem. A escolha do formato de arquivo (JPEG, PNG etc.) e a resolução da imagem influenciam a qualidade da representação numérica.
-## 2.3 DEFINIÇÃO E DESCRIÇÃO DA ACURÁCIA
-A acurácia será calculada através de um método simples de verificação pela base de dados de teste, onde é possível verificar a taxa de acertos e também através do uso de Optical Character Recognition (OCR), ferramenta consolidada desenvolvida para leitura de textos em imagens, que deverá identificar se há algo escrito na imagem e comparar a semântica com a de um dicionário de referência, onde será por fim calculada a acurácia pela taxa de correspondência entre os caracteres gerados e lidos com os do anteriormente mencionado dicionário.
+## 2.3 MÉTODO ANALÍTICO 
 
+A fim de reduzir o escopo do problema para torná-lo de mais simples resolução, iremos focar no quesito da problemática da geração de textos compreensíveis e coesos em imagens geradas artificialmente. Nesse caso, iremos trabalhar com a ideia de IAs colaborativas, onde temos dois sistemas que trabalham com um mesmo objetivo, complementando seu desenvolvimento. 
+
+Para tanto, a IA generativa será responsável pela geração de alguma imagem que contenha um texto fornecido no seu prompt, enquanto a IA possuidora do Optical Character Recognition (OCR) deverá identificar o texto, comparar com a informação dada no prompt e, por fim, seu resultado deverá servir como feedback para correção do 1º sistema, incentivando a criação de imagens com textos reais. De forma resumida, organizaremos o algoritmo em três etapas conforme segue: 
+
+Etapa 1: Geração da imagem com texto no prompt; 
+
+Etapa 2: Identificação do texto do texto via algoritmo de OCR e comparação com o texto do prompt; e 
+
+Etapa 3: Correção do texto se necessário e feedback da informação de erro. 
+
+## 2.4 DEFINIÇÃO E DESCRIÇÃO DA ACURÁCIA 
+
+A acurácia será calculada através de um método simples de verificação pela comparação citada anteriormente, entre o texto fornecido no prompt da geração de imagens e o resultado obtido pela IA detentora de OCR, ferramenta consolidada desenvolvida para leitura de textos em imagens, que deverá identificar se há algo escrito na imagem e comparar a semântica com a do comando, onde será por fim calculada a acurácia pela taxa de correspondência entre os caracteres gerados e lidos com os do anteriormente mencionado prompt. 
+
+## 2.5 RESULTADOS PRELIMINARES 
+
+Concretizando os objetivos apresentados anteriormente, esta etapa servirá como um proof of concept, ou uma prova de conceito, de que através do uso de IAs colaborativas é possível melhorar aspectos individuais da geração de imagem, no caso, o texto apresentando se tornando cada vez mais real e conciso, de aplicação prática em um contexto de mundo real. 
+
+Evidencia-se, assim, que ao corrigir erro tão crasso nos sistemas atuais, exploraremos uma oportunidade de mercado muito forte, haja vista que muitas pessoas e empresas necessitam hoje de um complemento às suas gerações de imagem quando falamos de elementos textuais, sendo necessário a contratação de um designer, por exemplo, para cobrir essas áreas atualmente fora do domínio das IAs generativas. Sanando este problema, teremos uma fatia de mercado exponente que estará ávida pelas novas soluções em Inteligência Artificial. Como exemplo da aplicação segue alguns exemplos teóricos da aplicação do script descrito: 
+
+![imagem 1](https://github.com/user-attachments/assets/5d719aad-3c29-4ec1-bae3-3218bec1b542)
+
+Imagem 1: Identificação e correção do texto ”Happy Birthday” 
+
+![image 2](https://github.com/user-attachments/assets/86e8db82-ebc1-4540-bb53-3050bd8cbf17)
+
+Imagem 2: Identificação e correção do texto ”CADERE IN PIEDI COME I GATTI” 
+
+![image 3](https://github.com/user-attachments/assets/fc5acaf3-290e-41b0-823a-7bb3c507b2a0)
+
+Imagem 3: Identificação e correção do texto  ”Clothing Store” 
+
+ 
+
+# 3. STORYTELLING 
+
+Inicialmente o trabalho buscava apresentar os conceitos da geração de imagens em modelos de IA generativa e apresentar melhores técnicas de prompt visando a melhor geração de imagens, porém devido a imprevistos como o alto nível de complexidade encontrados, optou-se por reduzir o escopo para otimização da geração de imagens em pontos-chave como a geração de textos em imagens, se utilizando da visão computacional.  
+
+O tema se mostra cada vez mais relevante no contexto da economia de atenção, em que o usuário está constantemente bombardeado por inúmeros estímulos diferentes como vídeos rápidos no TikTok, streamings, entre outros, sendo necessário uma agilidade quase que sobre humana dos times de desenvolvimento para competir e poder captar a atenção do usuário para si. 
+
+Nesse contexto o projeto visa utilizar as novas tecnologias de IA e suas técnicas de processamento de linguagem natural para traduzir as ideias de desenvolvimento em entradas do algoritmo para enfim obter o resultado esperado em tempo recorde com uma maior precisão. 
+
+O estudo do projeto visa desvendar qual a melhor combinação de caracteres e seus impactos na geração de imagens para a visão computacional, explicando de forma superficial os processos de codificação do prompt, stemming (Derivação), análise de dependência e a decodificação. 
+
+A codificação do prompt é o processo de transformação da entrada em bits para que o algoritmo possa entender o que cada palavra isoladamente significa, posteriormente o stemming ou Derivação, pegará todo o prompt decodificado e analisará o resultado do processo anterior para desvendar o sentido completo de cada frase, assim posteriormente na fase de análise de dependência o programa passará a entender como as frases se relacionam a fim de entender o sentido completo de todo o prompt para, então, na fase de decodificação ser executada a ordem e decodificado o resultado. 
+
+Para medirmos a acurácia e o grau de perda de informação optamos por confrontar a imagem gerada pela primeira IA com um algoritmo de OCR (Optical Character Recognition) que será responsável por ler o texto da imagem, possibilitando a automação do processo do cálculo de acurácia via pesquisa do texto lido em um dicionário, revelando se é de fato uma palavra ou frase existente. 
+
+No mais, o trabalho se mostra extremamente relevante para o cenário atual de competição acirrada pela atenção das pessoas, agregando dinamicidade, variedade e assertividade para a criação de conteúdo e atendimento das expectativas dos stakeholders. 
  
 # REFERENCIAS: 
 
