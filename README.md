@@ -49,31 +49,26 @@ a.	Desenvolvimento de Protótipos: Criar protótipos das novas soluções e func
 
 b.	Testes de Qualidade: Realizar testes rigorosos para garantir que as novas soluções atendam aos padrões de qualidade estabelecidos.
 
-## 1.3 DEFINIÇÃO DAS LINGUAGENS UTILIZADAS
+## 1.3  Comparativo evolutivo dos algoritmos ao longo dos anos 
+A evolução da geração de imagens com inteligência artificial tem tido saltos astronômicos 
+de qualidade, alinhando resultados com praticidades essa tecnologia tem impactado 
+positivamente todos os mercados de publicidade, entretenimento e quaisquer outros que 
+necessitem de elementos visuais como suporte para a expressão de sua mensagem. Nesse 
+contexto nosso projeto se apresenta como uma solução extremamente pertinente para esse 
+crescente mercado em evolução. 
+
+Um exemplo de tal pode ser visto na seguinte imagem que ilustra a evolução da tecnologia 
+no passar dos anos
+
+![Captura de tela 2024-11-23 211816](https://github.com/user-attachments/assets/dc18025f-b281-43de-83c6-c9e14681b77f)
+
+## 1.4 DEFINIÇÃO DAS LINGUAGENS UTILIZADAS
 Neste projeto será utilizada a linguagem Python por se tratar de uma linguagem amplamente usada no meio da ciência da computação para aprendizado de máquina, projetos que envolvem Deep Learning, entre outros exemplos, o que além a tornarem uma ferramenta eficaz, faz com existam diversos repositórios de código que contribuem para o desenvolvimento de outros projetos.
-## 1.4 BASE DE DADOS
+
+## 1.5 BASE DE DADOS
 A base de dados utilizada será uma base do site ImageNet, também disponível no Kaggle, ofertada pela Princeton University e Stanford University, que se trata de uma série de imagens rotuladas que servirão tanto para o treinamento do modelo que irá entender a imagem através de visão computacional, para que assim possa decodificá-la, quanto para a possível geração de imagens melhores que as fornecidas pelo MidJourney, pelos parâmetros elaborados anteriormente.
-## 1.5 CRONOGRAMA
 
-Etapa 3 – Apresentação de Produtos e Storytelling
-Objetivos: Consolidação dos resultados e preparação para apresentação.
-Atividades e Prazos:
-
-•	(30/09/2024) Semana 6:
-
-o	Consolidar os resultados do método analítico.
-
-o	Aplicar as medidas de acurácia.
-
-•	(14/10/2024) Semana 7:
-
-o	Descrever os resultados preliminares e apresentar um produto gerado.
-
-o	Descrever um possível modelo de negócios.
-
-•	(21/10/2024) Semana 8:
-
-o	Esboçar o Storytelling.
+## 1.6 CRONOGRAMA
 
 Etapa 4 – Apresentação e Conclusão do Projeto
 Objetivos: Finalizar e apresentar o projeto.
@@ -92,6 +87,7 @@ o	Apresentação final do projeto.
 # 2. DESENVOLVIMENTO
 ## 2.1 TRATAMENTO DA BASE DE DADOS
 A fim de começar o projeto de uma forma mais simplificada, iremos reduzir a nossa base de dados para imagens que contenham mãos e textos para que possamos focar na melhoria destes itens, conforme mencionado anteriormente, e assim ir desenvolvendo o restante do projeto ao longo do tempo. Desta forma, será necessário limpar a base de dados para selecionar apenas as imagens relevantes ao projeto, ao que estas serão divididas aleatoriamente e categorizadas em treinamento e teste, com uma proporção aproximada de 4:1.
+
 ## 2.2 DEFINIÇÃO E DESCRIÇÃO DAS BASES TEÓRICAS DOS MÉTODOS
 Fundamentos Matemáticos da Geração de Texto:
 
@@ -133,11 +129,9 @@ Etapa 2: Identificação do texto do texto via algoritmo de OCR e comparação c
 Etapa 3: Correção do texto se necessário e feedback da informação de erro. 
 
 ## 2.4 DEFINIÇÃO E DESCRIÇÃO DA ACURÁCIA 
-
 A acurácia será calculada através de um método simples de verificação pela comparação citada anteriormente, entre o texto fornecido no prompt da geração de imagens e o resultado obtido pela IA detentora de OCR, ferramenta consolidada desenvolvida para leitura de textos em imagens, que deverá identificar se há algo escrito na imagem e comparar a semântica com a do comando, onde será por fim calculada a acurácia pela taxa de correspondência entre os caracteres gerados e lidos com os do anteriormente mencionado prompt. 
 
 ## 2.5 RESULTADOS PRELIMINARES 
-
 Concretizando os objetivos apresentados anteriormente, esta etapa servirá como um proof of concept, ou uma prova de conceito, de que através do uso de IAs colaborativas é possível melhorar aspectos individuais da geração de imagem, no caso, o texto apresentando se tornando cada vez mais real e conciso, de aplicação prática em um contexto de mundo real. 
 
 Evidencia-se, assim, que ao corrigir erro tão crasso nos sistemas atuais, exploraremos uma oportunidade de mercado muito forte, haja vista que muitas pessoas e empresas necessitam hoje de um complemento às suas gerações de imagem quando falamos de elementos textuais, sendo necessário a contratação de um designer, por exemplo, para cobrir essas áreas atualmente fora do domínio das IAs generativas. Sanando este problema, teremos uma fatia de mercado exponente que estará ávida pelas novas soluções em Inteligência Artificial. Como exemplo da aplicação segue alguns exemplos teóricos da aplicação do script descrito: 
